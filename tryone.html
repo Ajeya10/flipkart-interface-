@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="util.css">
+    <title>E-commerce web site</title>
+    <div class="progressbar"></div>
+</head>
+<style>
+    * {
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    position: sticky;
+    bottom: 0px;
+    height: 5vh;
+    color: white;
+    background-color: black;
+    font-family: 'Teko', sans-serif;
+    font-size: larger;
+    display: flex;
+    position: sticky;
+
+}
+
+.logo img {
+    width: 40px;
+
+}
+
+.search input {
+    width: 32vw;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.search {
+    display: flex;
+    margin-left: 5vw;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn button {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    border: solid black 2mm;
+}
+
+.btn img {
+    width: 25px;
+}
+
+.btn {
+    margin-left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2vw;
+}
+
+
+nav {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    list-style: none;
+    height: 50px;
+    width: 100vw;
+    background-color: black;
+
+}
+
+nav ul {
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    list-style: none;
+
+}
+
+nav ul li a {
+    color: white;
+    padding-left: 3vw;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: rgb(4, 207, 248);
+    font-weight: bold;
+}
+
+
+
+
+
+.mainholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.holder{
+    background-color: white;
+    height: 250px;
+    display: inline-flex;
+    flex-direction:row;
+    width: 90vw;
+    margin: auto;
+    overflow: scroll;
+}
+.slider {
+    display: flex;
+    padding-top: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider img {
+    max-width: 900px;
+    height: auto;
+    margin-bottom: 2mm;
+}
+
+  
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 12px;
+
+
+}
+
+h2 {
+    margin-bottom:3vw ;
+    margin-top: 4vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    background-color: white;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    border: 2mm gainsboro solid;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    border-left: black 2mm solid;
+    border-right: black 2mm solid;
+    /* border-top: none; */
+    /* border-bottom:none ; */
+}
+
+main {
+    background-color: gainsboro;
+}
+
+.paragraph {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+.textC1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progressbar {
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    height: 1px;
+    animation: bar 2s ease-in-out 1;
+}
+
+@keyframes bar {
+    0% {
+        width: 0vw;
+        background-color: red;
+    }
+
+    50% {
+        width: 50vw;
+        background-color: red;
+    }
+
+    100% {
+        width: 100vw;
+        background-color: red;
+    }
+}
+
+@media screen and (max-width : 750px) {
+    nav {
+        display: none;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav2 {
+
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 1mm;
+        grid-template-columns: auto auto auto auto auto auto auto;
+    }
+
+    .box1 a,
+    .box2 a,
+    .box3 a {
+        font-size: 10px;
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    .box4 input {
+        overflow: hidden;
+        width: 80px;
+        height: 10px;
+    }
+
+    .box5 button {
+        width:10px;
+        background-color: black;
+        border: solid black;
+    }
+
+    .slider img {
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 2mm;
+    }
+
+} 
+    @media screen and (min-width : 750px) {
+        .nav2 {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="progressbar"></div>
+    <nav class="nav2">
+        <div class="box"></div><img src="Untitled.jpg" alt="" width="50px"></div>
+        <div class="box1"><a href="home.html">HOME</a></div>
+        <div class="box2"><a href="about.html">ABOUT</a></div>
+        <div class="box3"><a href="contact.html">CONTACT</a></div>
+        <div class="box4"><input type="text" placeholder="  Search..."></div>
+        <div class="box5"><button><img src="download.png" alt="search" width="20px"></button></div>
+    </nav>
+    <nav>
+        <div class="logo"><img src="attachment_122457765.jpeg" alt="error"></div>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="search"><input type="text" placeholder="  Search..."></div>
+        <div class="btn"><button><img src="download.png" alt="search"></button></div>
+    </nav>
+
+    <header></header>
+    <main>
+        <div class="slider">
+            <img src="https://source.unsplash.com/800x500/?shop,E-commerce" alt="">
+        </div>
+        <h2>sports</h2>
+        <div class="mainholder">
+            <div class="holder">
+
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?cricket,shoes" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">cricket</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?football,products" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">cricket</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?basketball,products" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">cricket</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?tennis,products" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">cricket</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?volleyball,products" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">cricket</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?hockey,products" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">cricket</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?ludo,products" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">cricket</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?carrom,products" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">cricket</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <h2>food</h2>
+        <div class="mainholder">
+            <div class="holder">
+
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?indian,food" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">indian</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?chinese,food" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">chinese</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?food,packs" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">packets</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?chips,lays" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">chips</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?drinks,cold drinks" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">cold drinks</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?milkshake" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">milkshake</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?chocolate" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">chocolate</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?ice cream" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">ice-cream</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <h2>clothes</h2>
+        <div class="mainholder">
+            <div class="holder">
+
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?pant" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">pant</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?shirt" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">shirt</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?t-shirt" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">t-shirt</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?clothes,shorts" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">shorts</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?hobbies" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">hobbies</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?jacket" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">jacket</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?jeans" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">jeans</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?kurta" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">kurta</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <h2>glasses</h2>
+        <div class="mainholder">
+            <div class="holder">
+
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?glasses,black" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">glasses</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?glasses,blue" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">glasses</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?glasses,red" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">glasses</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?glasses" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">glasses</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?glasses,purple" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">glasses</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?cricket,products" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">glasses</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?glasses,green" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">glasses</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div.box2><img src="https://source.unsplash.com/160x160/?glasses,yellow" alt=""></div.box2>
+                    <div class="lines">
+                        <p class="paragraph">images</p>
+                        <p class="paragraph">glasses</p>
+                        <p class="paragraph">products</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer class="textC1">
+        <p> copyright &copy; MYzon.com</p>
+    </footer>
+</body>
+
+</html>
